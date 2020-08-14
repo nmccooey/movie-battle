@@ -46,3 +46,12 @@ figure .image img {
   height: 50px;
   margin-right: 10px;
 }
+
+.dropdown-menu {
+  max-height: 16em;
+}
+
+.dropdown-content {
+  overflow-y: scroll;
+  max-height: inherit;
+}
