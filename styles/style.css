@@ -1,3 +1,11 @@
+html {
+  background-color: rgb(247, 247, 247);
+}
+
+.input {
+  border: solid black 1px;
+}
+
 .tutorial {
   width: 600px;
   text-align: center;

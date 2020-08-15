@@ -104,9 +104,14 @@ const runComparison = () => {
 };
 
 const movieTemplate = (movieDetail) => {
-  const dollars = parseInt(
-    movieDetail.BoxOffice.replace(/\$/g, "").replace(/,/g, "")
-  );
+  let dollars = 0;
+  if (movieDetail.BoxOffice) {
+    dollars = parseInt(
+      movieDetail.BoxOffice.replace(/\$/g, "").replace(/,/g, "")
+    );
+  } else {
+    movieDetail.BoxOffice = "N/A";
+  }
   const metascore = parseInt(movieDetail.Metascore);
   const imdbRating = parseFloat(movieDetail.imdbRating);
   const imdbVotes = parseInt(movieDetail.imdbVotes.replace(/,/g, ""));
