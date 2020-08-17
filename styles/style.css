@@ -2,6 +2,25 @@ html {
   background-color: rgb(247, 247, 247);
 }
 
+body {
+  margin-bottom: 50px;
+}
+
+i {
+  color: white;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #363636;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+
 .input {
   border: solid black 1px;
 }
