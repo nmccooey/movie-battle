@@ -86,3 +86,8 @@ figure .image img {
 .title {
   text-align: center;
 }
+
+.winner {
+  padding: 5px;
+  border: dotted #5bc775 4px;
+}

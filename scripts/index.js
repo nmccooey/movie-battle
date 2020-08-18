@@ -73,6 +73,9 @@ const runComparison = () => {
     "#right-summary .notification"
   );
 
+  let leftWins = 0;
+  let rightWins = 0;
+
   leftSideStats.forEach((leftStat, index) => {
     const rightStat = rightSideStats[index];
 
@@ -85,11 +88,13 @@ const runComparison = () => {
       leftStat.classList.remove("is-primary");
       leftStat.classList.remove("is-success");
     } else if (rightSideValue > leftSideValue) {
+      rightWins++;
       rightStat.classList.remove("is-primary");
       rightStat.classList.add("is-success");
       leftStat.classList.add("is-primary");
       leftStat.classList.remove("is-success");
     } else if (leftSideValue > rightSideValue) {
+      leftWins++;
       rightStat.classList.add("is-primary");
       rightStat.classList.remove("is-success");
       leftStat.classList.remove("is-primary");
@@ -101,6 +106,15 @@ const runComparison = () => {
       leftStat.classList.remove("is-success");
     }
   });
+  if (leftWins > rightWins) {
+    document.querySelector("#left-summary").classList.add("winner");
+    document.querySelector("#right-summary").classList.remove("winner");
+  } else if (rightWins > leftWins) {
+    document.querySelector("#right-summary").classList.add("winner");
+    document.querySelector("#left-summary").classList.remove("winner");
+  } else {
+    return;
+  }
 };
 
 const movieTemplate = (movieDetail) => {
