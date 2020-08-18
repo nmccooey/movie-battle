@@ -82,3 +82,7 @@ figure .image img {
   overflow-y: scroll;
   max-height: inherit;
 }
+
+.title {
+  text-align: center;
+}
